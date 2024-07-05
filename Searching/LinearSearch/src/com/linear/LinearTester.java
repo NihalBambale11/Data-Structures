@@ -1,0 +1,30 @@
+package com.linear;
+
+import java.util.Scanner;
+
+public class LinearTester {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		LinearSearch l = new LinearSearch();
+		System.out.print("Enter the size of array : ");
+		int n = scan.nextInt();
+		int [] arr = new int[n];
+		
+		System.out.println("Enter the element of Array");
+		for(int i = 0 ; i < n ; i++) {
+			arr[i]  = scan.nextInt();
+		}
+		
+		System.out.println("Enter the Element you want to Search : ");
+		int find = scan.nextInt();
+		
+		int pos = l.linearSearch(arr,find);
+		
+		if(pos == -1) {
+			System.out.println("Element Not Found ");
+		}
+		else {
+			System.out.println("Element Found At index " +pos+" And position "+(pos+1));
+		}
+	}
+}
