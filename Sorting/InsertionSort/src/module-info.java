@@ -4,5 +4,5 @@
 /**
  * 
  */
-module HashTable {
+module SelectionSort {
 }
